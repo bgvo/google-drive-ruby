@@ -108,16 +108,16 @@ module GoogleDrive
     #   file.download_to_temp_file("/var/folders/r9/9mv.../5000-1kmd27o.extension")
     #
     # To export the file in other formats, use export_as_file.
-    def download_to_temp_file(params = {})
-      case self.resource_type
-      when "spreadsheet"
-        file_path = Tempfile.new.path+'.'+'xlsx'
-      end
-      open(file_path, "wb") do |f|
-        download_to_io(f, params)
-      end
-      file_path
-    end
+    # def download_to_temp_file(params = {})
+    #   case self.resource_type
+    #   when "spreadsheet"
+    #     file_path = Tempfile.new.path+'.'+'xlsx'
+    #   end
+    #   open(file_path, "wb") do |f|
+    #     download_to_io(f, params)
+    #   end
+    #   file_path
+    # end
 
     # Downloads the file and returns as a String.
     #
